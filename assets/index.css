@@ -49,13 +49,15 @@ body{
 
 .top-container a:hover{
     text-decoration: none;
-    color:#dce1e8;
-    transition: 0.3s;
+    color:#000000;
+    transition: 0.1s;
     border: rgb(49, 49, 203) 3px solid;
     background-color: rgb(49, 49, 203);
 }
 
-
+.top-container a:active{
+    color: #ffffff;
+}
 
 
 
@@ -98,9 +100,13 @@ img.dp{
 
 .header .nav-links a:hover{
     color: rgb(49, 49, 203);
-    transition: 0.2s;
+    transition: 0.1s;
 }
-  
+
+.header .nav-links a:active{
+    color: rgb(0, 0, 0);
+}
+
 .sticky {
     position: fixed;
     top: 0;
@@ -229,7 +235,7 @@ th{
     border-radius: 7px;
     height: auto;
     width: 300px;
-    padding: 10px;
+    padding: 10px 10px 40px 10px;
     font-family: "Poppins", sans-serif;
     color: #d9dee5;
     background-color: #d4dadf4c;
@@ -247,7 +253,7 @@ th{
 .education .education-flex .education-container:hover{
     background-color: #d4dadf42;
     border: #d9dee5 solid 3px;
-    transition: 0.2s;
+    transition: 0.1s;
 }
 
 .education-horizontal-timeline {
@@ -321,7 +327,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 
 .skills p:hover{
     background-color: #d4dadf42;
-    transition: 0.2s;
+    transition: 0.1s;
     border: #d9dee5 solid 3px;
 }
 
@@ -347,7 +353,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 
 .project .project-container{
     color: #d9dee5;
-    border-radius: 5px;
+    border-radius: 10px;
     height: auto;
     margin: 20px;
     background-color: #d4dadf4c;
@@ -357,7 +363,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .project .project-container:hover{
     background-color: #d4dadf42;
     border: #d9dee5 solid 4px;
-    transition: 0.2s;
+    transition: 0.1s;
 }
 
 .project .project-container h3{
@@ -365,35 +371,44 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     color:#d9dee5;
 }
 
-.project .project-container p{
+.project .project-container .project-container-text p{
     font-family: "Poppins", sans-serif;
     color:#d9dee5;
+    text-align: left;
 }
 
 img.img1{
     width: 450px;
     height: 360px;
     padding: 10px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
 }
 
 img.img2{
     width: 420px;
     height: 280px;
     padding: 10px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
 }
 img.img3{
     width: 520px;
     height: 300px;
     padding: 10px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+}
+
+img.img4{
+    width: 450px;
+    height: 340px;
+    padding: 10px;
+}
+
+img.img5{
+    width: 420px;
+    height: 300px;
+    padding: 10px;
+}
+img.img6{
+    width: 500px;
+    height: 300px;
+    padding: 10px;
 }
 
 .project-container-flex{
@@ -421,7 +436,8 @@ img.img3{
     margin: 3px;
     text-decoration: none;
     color: #d9dee5;
-    font-size: 36px;
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
 }
 
 .link-flex a:hover{
@@ -491,7 +507,7 @@ img.img3{
     color: rgb(0, 0, 0);
     font-weight: bold;
     font-size: 18px;
-    transition: 0.6s ease;
+    transition: 0.1s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
     background-color: rgba(0, 0, 0, 0.116);
@@ -538,7 +554,7 @@ img.img3{
     background-color: #a7a5a5;
     border-radius: 50%;
     display: inline-block;
-    transition: background-color 0.6s ease;
+    transition: background-color 0.3s ease;
   }
   
   .active, .dot:hover {
