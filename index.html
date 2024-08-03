@@ -6,17 +6,14 @@
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <div class="top-container">
-        <h3>WELCOME TO THE PORTFOLIO OF</h3>
-        <h1><b style="color: rgb(44, 44, 209); font-size: 50px;">A</b>BHIDEEP <b style="color: rgb(44, 44, 209); font-size: 50px;">M</b>ANDAPATI</h1>
-        <a href="https://drive.google.com/file/d/159yGJrvDC4auoXv_pAo8rumkv7TIIdNC/view">Resume</a>
-    </div>
 </head>
-
 <body>
     <div class="header" id="myHeader">
         <img class="dp" src="assets/dp.jpg">
-        <h1>Abhideep <b>Mandapati</b></h1>
+        <h2>Abhideep</h2>     
+        <!-- <div class="menu-button" >
+Menu
+          </div>  -->
         <div class="nav-links">
             <a href="#about_id">ABOUT</a>
             <a href="#edu_id">EDUCATION</a>
@@ -24,37 +21,23 @@
             <a href="#pro_id">PROJECTS</a>
             <a href="#cert_id">ACHIEVEMENTS</a>
             <a href="#cont_id">CONTACT</a>
+            <select>
+                <option value="dark">DARK</option>
+                <option value="light">LIGHT</option>
+            </select>
         </div>
     </div>
     <div class="content">
         <div id="about_id"></div>
         <div class="about">
-            <h1>ABOUT ME</h1>
-            <div class="about-container1">
-                <div class="about-container2">
-                <p>I am a fourth-year student at <b>Chaitanya Bharathi Institute of Technology</b> in Hyderabad, pursuing a Bachelor's degree in <b>Artificial Intelligence and Data Science.</b>
-                <br>My keen interest in web development has enabled me to learn various technologies such as <b>HTML, CSS, and JavaScript,</b> which I have applied to develop several projects.
-                <br>I am adept at solving real-life problems through <i>programming</i> and am currently seeking a position as a <b>Software developer.</b>
-                <br>In this pursuit, I am actively enhancing my skills to better meet industry demands.
-                </p>
-                    <table>
-                        <tr>
-                          <th>Phone</th>
-                          <th>Email</th>
-                          <th>Address</th>
-                        </tr>
-                        <tr>
-                          <td>7801002139</td>
-                          <td>abhideep.2004.3@gmail.com</td>
-                          <td>Hyderabad</td>
-                        </tr>
-                      </table>
-                      <div class="about-links">
-                        <a href="https://github.com/abhideep03"><i class='fa fa-github'></i></a>
-                        <a href="https://www.linkedin.com/in/abhideep-mandapati-/"><i class="fa fa-linkedin"></i></a>
-                        <a href="https://x.com/abhipinkman"><i class="fa fa-twitter"></i></a>
-                      </div>
-            </div>
+                <div class="about-left">
+                    <h1>Know More About Me</h1>
+                    <p>I am Abhideep and you can know more about me by clicking below:</p>
+                    <a href="qwerty.com" class="dashing-fill"><b>Resume</b></a>
+                </div>
+                <div class="about-right">
+                    <img src="./assets/coverpic.jpg">
+                </div>
         </div>
         </div>
         <div id="edu_id"></div>
@@ -80,8 +63,12 @@
             <div class="skills-flex">
                 <p>Python</p>
                 <p>Java</p>
+            </div>
+            <div class="skills-flex">
                 <p>DSA</p>
                 <p>MySQL</p>
+            </div>
+            <div class="skills-flex">
                 <p>DBMS</p>
                 <p>Javascript</p>
                 <p>ReactJS</p>
@@ -89,12 +76,16 @@
             <div class="skills-flex">
                 <p>MongoDB</p>
                 <p>Bootstrap</p>
+            </div>
+            <div class="skills-flex">
                 <p>MERN stack development</p>
                 <p>R</p>
             </div>
             <div class="skills-flex">
                 <p>Data Science</p>
                 <p>Machine learning</p>
+            </div>
+            <div class="skills-flex">
                 <p>Cloud Computing</p>
                 <p>Deep learning</p>
             </div>
@@ -249,8 +240,18 @@
                 </div> 
             </div>
         </div>
-
+    </div>
+</body>
     <script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+        const menuButton = document.querySelector('.menu-button');
+        const navLinks = document.querySelector('.nav-links');
+          menuButton.addEventListener('click', function() {
+          navLinks.classList.toggle('active');
+          });
+        });    
+
         let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -294,7 +295,6 @@ function showSlides(n) {
           }
         }
     </script>
-</body>
 <footer>
 <!-- <div id="cont_id"></div>
 <div style="background-color: rgb(255, 255, 255);">
@@ -312,14 +312,14 @@ function showSlides(n) {
     <div style="margin-top:20px;height:3px;background-color:black"></div>
     <div style="margin-top:22px;height:1px;background-color:black"></div>-->
     <div class="footer-a" style="margin-top:10px;height:240px;border-top: rgba(255, 255, 255, 0.489) 1px solid;">
-        <h1>STAY CONNECTED!</h1>
+        <h2>STAY CONNECTED!</h2>
         <div class="contact-flex">
-            <a href="mailto:abhideep.2004.3@gmail.com">abhideep.2004.3@gmail.com</a>
+            <p>abhideep.2004.3@gmail.com</p>
             <p>+91-7801002139 </p>
             <p><b>Address: </b>Hyderabad, India</p>
         </div>
-        <p>Check out my profiles:</p>
-        <div class="contact-flex">
+        <h3>Check out my profiles:</h3>
+        <div class="links-flex">
             <a href="www.instagram.com/abhideep03_"><i class='fa fa-instagram'></i></a>
             <a href="www.instagram.com/abhideep03_"><i class="fa fa-twitter"></i></a>
             <a href="www.instagram.com/abhideep03_"><i class="fa fa-linkedin"></i></a>
