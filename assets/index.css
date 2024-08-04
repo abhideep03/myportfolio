@@ -189,10 +189,10 @@ img.dp {
   animation: bg 2s ease-in-out infinite;
 }
 
-.about-left a:hover {
+/* .about-left a:hover {
   transition: var(--transition);
   background: linear-gradient(180deg, var(--colora), var(--colora2));
-}
+} */
 
 .about-right img {
   width: 97%;
