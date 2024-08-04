@@ -35,7 +35,7 @@ body {
 body:has(option[value="light"]:checked) {
   --color-bg: #fff;
   --color-fg: #1e1e1e;
-  --color-bg-trans: #d6e0e54c;
+  --color-bg-trans: #8387894c;
   --color-fg-trans: #2426274c;
   transition: var(--transition);
 }
@@ -142,22 +142,11 @@ img.dp {
   margin: 1rem 0;
 }
 
-.about-left a {
-  padding: 10px 50px;
-  background-color: var(--color-primary);
-  text-decoration: none;
-  color: var(--color-bg);
-  font: var(--p);
-  border-radius: 5px;
-  margin: 1rem 0;
-}
-
 .dashing-fill {
   cursor: pointer;
-  background: var(--color-bg);
+  padding: 10px 50px;
+  font: var(--p);
   text-decoration: none;
-  font: var(--links);
-  padding: 12px 20px;
   border-radius: 8px;
   transition: var(--transition);
   color: var(--color-bg);
@@ -189,10 +178,23 @@ img.dp {
   animation: bg 2s ease-in-out infinite;
 }
 
-/* .about-left a:hover {
-  transition: var(--transition);
-  background: linear-gradient(180deg, var(--colora), var(--colora2));
-} */
+.about-left-a {
+  padding: 0 10px;
+  text-decoration: none;
+  font: var(--p);
+  border-radius: 5px;
+  margin: 0 0.5rem;
+  background: linear-gradient(45deg, var(--colora), var(--colora2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-left-a:hover {
+  background: linear-gradient(45deg, var(--colora2), var(--colora));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: 0.5s;
+}
 
 .about-right img {
   width: 97%;
@@ -206,13 +208,15 @@ img.dp {
   transition: 0.3s;
   border-radius: 7px;
 }
+
 /* 
 table {
   margin-left: 15px;
-  text-align: left;
+  text-align: center;
   font-family: "Poppins", sans-serif;
   text-align: center;
-  background-color: #ffffff5d;
+  background-color: var(--color-bg-trans);
+  color: var(--color-fg);
   border-radius: 5px;
   margin-bottom: 20px;
 }
@@ -222,7 +226,7 @@ th {
   width: 250px;
   border-radius: 5px;
   background-color: #0000002a;
-}
+} */
 
 .about-links {
   display: flex;
@@ -241,7 +245,7 @@ th {
 
 .about-links i:hover {
   color: #02149f;
-} */
+}
 
 .education {
   width: min(1200px, 98%);
