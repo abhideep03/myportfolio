@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Abhideep's Portfolio</title>
-    <link rel="icon" href="path/to/your/favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/index.css">
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
@@ -14,9 +12,6 @@
     <div class="header" id="myHeader">
         <img class="dp" src="assets/dp.jpg">
         <h2>Abhideep</h2>     
-        <!-- <div class="menu-button" >
-Menu
-          </div>  -->
         <div class="nav-links">
             <a href="#about_id">ABOUT</a>
             <a href="#edu_id">EDUCATION</a>
@@ -24,10 +19,7 @@ Menu
             <a href="#pro_id">PROJECTS</a>
             <a href="#cert_id">ACHIEVEMENTS</a>
             <a href="#cont_id">CONTACT</a>
-            <select>
-                <option value="dark">DARK</option>
-                <option value="light">LIGHT</option>
-            </select>
+            <button class="btn" onclick="toggledarkmode()"><i class="fa fa-adjust"></i></button>
         </div>
     </div>
     <div class="content">
@@ -49,6 +41,20 @@ Menu
                 </div>
         </div>
         </div>
+        <!-- <div class="about2">
+            <table>
+                <tr>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Location</th>
+                </tr>
+                <tr>
+                    <td>abhideep.03@gmail.com</td>
+                    <td>7801002139</td>
+                    <td>Hyderabad, India</td>
+                </tr>
+            </table>
+        </div> -->
         <div id="edu_id"></div>
         <div class="education">
             <h1>EDUCATION</h1>
@@ -95,9 +101,9 @@ Menu
                     <img class="img1" src="./assets/project1.png">
                     <div class="project-container-text">
                         <h3>MEDPRO360</h3>
-                        <p><strong>Tech Stack:</strong> React, Node.js, Express, MongoDB, Bootstrap</p>
-                        <p>• A dynamic website that allows patients to anonymously post medical queries publicly.<br>
-                            • Doctors respond to these queries and can recommend appointments, which can be booked directly on the site.</p>
+                        <p><b>Tech Stack:</b> React, Node.js, Express, MongoDB, Bootstrap<br><br>
+                        • A dynamic website that allows patients to anonymously post medical queries publicly.<br>
+                        • Doctors respond to these queries and can recommend appointments, which can be booked directly on the site.</p>
                         <div class="link-flex">
                             <a href="https://github.com/abhideep03/medpro360"><i class="fa fa-github"></i> GitHub</a>
                         </div>
@@ -109,10 +115,9 @@ Menu
                     <img class="img2" src="./assets/project2.png">
                     <div class="project-container-text">
                         <h3>HEART DISEASE ANALYSIS AND PREDICTION using R</h3>
-                        <p><strong>Tech Stack:</strong> R, Data science, Machine learning</p>
-                        <p>• Used the dataset created by UCI.<br>
-                            • Pre-process, Analysis, Visualization, Modeling, Predicting and Calculating the
-                            performance of model.</p>
+                        <p><strong>Tech Stack:</strong> R, Data science, Machine learning<br><br>
+                        • Used the dataset created by UCI.<br>
+                        • Pre-process, Analysis, Visualization, Modeling, Predicting and Calculating the performance of model.</p>
                         <div class="link-flex">
                             <a href="https://github.com/abhideep03/heart-disease-analysis"><i class="fa fa-github"></i> GitHub</a>
                         </div>
@@ -124,37 +129,23 @@ Menu
                     <img class="img3" src="./assets/project3.png">
                     <div class="project-container-text">
                         <h3>SPEECH-TO-TEXT CONVERTER</h3>
-                        <p><strong>Tech Stack:</strong> React, Node.js, Bootstrap</p>
-                        <p>• Created a static website that converts speech to text.<br>
-                            • Speech recognizer module is available in React.JS.</p>
+                        <p><b>Tech Stack:</b> React, Node.js, Bootstrap<br><br>
+                        • Created a static website that converts speech to text.<br>
+                        • Speech recognizer module is available in React.JS.</p>
                         <div class="link-flex">
-                            <a href="https://github.com/abhideep03/speech-to-text"><i class="fa fa-github"></i> GitHub</a>
+                            <a href="https://github.com/abhideep03/speechtotext"><i class="fa fa-github"></i> GitHub</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- <div class="project-container">
-                <div class="project-container-flex-reverse">
-                    <img class="img4" src="./assets/project4.png">
-                    <div class="project-container-text">
-                        <h3>Superstore Analysis</h3>
-                        <p><strong>Tech Stack:</strong> Python, Machine learning, Numpy, Pandas, Matplotlib.</p>
-                        <p>• A machine learning project producing insights of superstores in USA.<br>
-                            • Insights are derived from regions, states, categories, etc.</p>
-                        <div class="link-flex">
-                            <a href="https://github.com/abhideep03/super-store-analysis"><i class="fa fa-github"></i> GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
             <div class="project-container">
                 <div class="project-container-flex-reverse">
                     <img class="img5" src="./assets/project5.png">
                     <div class="project-container-text">
                         <h3>SPEECH EMOTION RECOGNITION</h3>
-                        <p><strong>Tech Stack:</strong> Python, Machine learning, Numpy, Tensorflow.</p>
-                        <p>• This data science project recognises the emotion of certain speeches.<br>
-                            • Four emotions Happy, sad, angry, fear are the four possible predctions.</p>
+                        <p><b>Tech Stack:</b> Python, Machine learning, Numpy, Tensorflow.<br><br>
+                        • This data science project recognises the emotion of certain speeches.<br>
+                        • Four emotions Happy, sad, angry, fear are the four possible predctions.</p>
                         <div class="link-flex">
                             <a href="https://github.com/abhideep03/Speech-Emotion-Recognition"><i class="fa fa-github"></i> GitHub</a>
                         </div>
@@ -166,9 +157,9 @@ Menu
                     <img class="img6" src="./assets/project6.png">
                     <div class="project-container-text">
                         <h3>Analysing Terrorism around the world</h3>
-                        <p><strong>Tech Stack:</strong> Python, Machine learning, Numpy, Pandas, Matplotlib.</p>
-                        <p>• This data science project helps to derive insights from terrorist attacks happening around the world.<br>
-                            • Insights derived able to explain which country is the reason for most attacks and which countries are most effected.</p>
+                        <p><b>Tech Stack:</b> Python, Machine learning, Numpy, Pandas, Matplotlib.<br><br>
+                        • This data science project helps to derive insights from terrorist attacks happening around the world.<br>
+                        • Insights derived able to explain which country is the reason for most attacks and which countries are most effected.</p>
                         <div class="link-flex">
                             <a href="https://github.com/abhideep03/terrorism-analysis"><i class="fa fa-github"></i> GitHub</a>
                         </div>
@@ -221,12 +212,12 @@ Menu
                     <div class="mySlides fade">
                         <div class="numbertext">8 / 9</div>
                         <img src="./assets/certificate8.png" style="width:100%">
-                        <div class="cap-text">Project based workshop based on IoT by MOI-ECE Department, CBIT</div>
+                        <div class="cap-text">Python for Data science certification from IBM</div>
                     </div>
                     <div class="mySlides fade">
                         <div class="numbertext">9 / 9</div>
                         <img src="./assets/certificate9.png" style="width:100%">
-                        <div class="cap-text">Project based workshop based on IoT by MOI-ECE Department, CBIT</div>
+                        <div class="cap-text">Introduction to Data science by Cisco Networking academy</div>
                     </div>
                     
                     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -250,7 +241,10 @@ Menu
     </div>
 </body>
     <script>
-
+        function toggledarkmode() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+         }
         document.addEventListener('DOMContentLoaded', function() {
         const menuButton = document.querySelector('.menu-button');
         const navLinks = document.querySelector('.nav-links');
@@ -318,6 +312,7 @@ function showSlides(n) {
     <div style="margin-top:18px;height:5px;background-color:black"></div>
     <div style="margin-top:20px;height:3px;background-color:black"></div>
     <div style="margin-top:22px;height:1px;background-color:black"></div>-->
+    <div id="cont_id"></div>
     <div class="footer-a" style="margin-top:10px;height:240px;border-top: rgba(255, 255, 255, 0.489) 1px solid;">
         <h2>STAY CONNECTED!</h2>
         <div class="contact-flex">
