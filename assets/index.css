@@ -205,28 +205,9 @@ img.dp {
 
 .about-right img:hover {
   transform: scale(1.01);
-  transition: 0.3s;
-  border-radius: 7px;
+  transition: 0.1s;
+  border-radius: 8px;
 }
-
-/* 
-table {
-  margin-left: 15px;
-  text-align: center;
-  font-family: "Poppins", sans-serif;
-  text-align: center;
-  background-color: var(--color-bg-trans);
-  color: var(--color-fg);
-  border-radius: 5px;
-  margin-bottom: 20px;
-}
-
-th {
-  margin-right: 30px;
-  width: 250px;
-  border-radius: 5px;
-  background-color: #0000002a;
-} */
 
 .about-links {
   display: flex;
@@ -657,8 +638,10 @@ img.img6 {
 }
 
 .links-flex a:hover {
-  color: var(--color-primary);
   transition: var(--transition);
+    background: linear-gradient(45deg, var(--colora), var(--colora2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 @media only screen and (max-width: 1200px) {
