@@ -131,11 +131,16 @@ img.dp {
 }
 
 .about-left h1 {
-  color: var(--color-fg);
-  font-size: 52px;
+  font-size: 56px;
   font-family: "Playfair Display", serif;
   font-weight: 900;
   font-style: italic;
+  background: linear-gradient(
+    135deg,
+    var(--color-fg) 50%, rgba(255,255,255,0) 100%
+  );
+  background-clip: text;
+  color: transparent;
   line-height: 0.8;
   margin: 1rem 0;
 }
