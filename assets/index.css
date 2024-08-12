@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,900&display=swap");
+
 :root {
   --color-fg: #f9f9f9;
   --color-bg: #1e1e1e;
@@ -34,6 +36,39 @@ body {
   --color-fg-trans: #2426274c;
   --shadow: var(--color-bg) 0px 0px 10px 0px;
   transition: var(--transition);
+}
+
+.fade-in {
+  opacity: 0;
+  filter: blur(10px);
+  transform: translateY(100px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  filter: blur(0px);
+  transform: translateY(0);
+}
+
+.cursor {
+  display: inline-block;
+  width: 3px;
+  background-color: #000;
+  margin-left: 2px;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .header {
@@ -72,24 +107,14 @@ img.dp {
   margin-left: auto;
 }
 
-.header .nav-links a {
+.header .nav-links button {
   font: var(--links);
   color: var(--color-fg);
   margin: 4%;
   text-decoration: none;
-}
-
-.header .nav-links a:hover {
-  color: var(--color-primary);
-  transition: var(--transition);
-}
-
-.header .nav-links button {
-  font: var(--p);
-  color: var(--color-fg);
-  padding: 0;
   background: none;
   border: none;
+  cursor: pointer;
 }
 
 .header .nav-links button:hover {
@@ -97,10 +122,25 @@ img.dp {
   transition: var(--transition);
 }
 
+.header .nav-links button.btn {
+  font: var(--p);
+  font-size: 24px;
+  color: var(--color-fg);
+  padding-bottom: 3.5px;
+  margin: 0 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.header .nav-links button.btn:hover {
+  color: var(--color-primary);
+  transition: var(--transition);
+}
+
 .about {
   height: auto;
-  margin: 20px auto;
-  margin-top: 60px !important;
+  margin: 160px auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -123,15 +163,18 @@ img.dp {
 
 .about-left h1 {
   color: var(--color-fg);
-  font: var(--h1);
-  margin-top: 1rem;
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+  font-style: italic;
+  margin-top: 0rem;
+  font-size: 70px;
 }
 
 .about-left p {
   font: var(--p);
   line-height: 1.2;
   color: var(--color-fg);
-  margin: 1rem 0;
+  margin: 1rem 1.5rem 1.5rem 0rem;
 }
 
 .dashing-fill {
