@@ -13,24 +13,21 @@
         <img class="dp" src="assets/dp.jpg">
         <h2>Abhideep</h2>     
         <div class="nav-links">
-            <a href="#about_id">ABOUT</a>
-            <a href="#edu_id">EDUCATION</a>
-            <a href="#ski_id">SKILLS</a>
-            <a href="#pro_id">PROJECTS</a>
-            <a href="#cert_id">ACHIEVEMENTS</a>
-            <a href="#cont_id">CONTACT</a>
+            <button onclick="scrolltoabout()">ABOUT</button>
+            <button onclick="scrolltoedu()">EDUCATION</button>
+            <button onclick="scrolltoskills()">SKILLS</button>
+            <button onclick="scrolltoprojects()">PROJECTS</button>
+            <button onclick="scrolltocert()">ACHIEVEMENTS</button>
+            <button onclick="scrolltocontact()">CONTACT</button>
             <button class="btn" onclick="toggledarkmode()"><i class="fa fa-adjust"></i></button>
         </div>
     </div>
     <div class="content">
         <div id="about_id"></div>
-        <div class="about">
+            <div class="about">
                 <div class="about-left">
                     <h1>About Me</h1>
-                    <p>I am Abhideep, a fourth-year AI and Data Science student at Chaitanya Bharathi Institute of Technology.</p>
-                    <p>Passionate for web development. Proficient in MERN stack development. Created a portfolio of projects.</p>
-                    <p>Eager to contribute my skills to a dynamic software development team. Seeking a role that will push me to excel while making a tangible impact.</p>
-                    </p>
+                    <p><span id="typed-text"></span></p>
                     <a href="https://drive.google.com/file/d/159yGJrvDC4auoXv_pAo8rumkv7TIIdNC/view?usp=sharing" class="dashing-fill"><b>Resume</b></a>
                     <a href="https://github.com/abhideep03" class="about-left-a"><i class="fa fa-github"></i></a>
                     <a href="https://www.linkedin.com/in/abhideep-mandapati-/" class="about-left-a"><i class="fa fa-linkedin"></i></a>
@@ -39,24 +36,10 @@
                 <div class="about-right">
                     <img src="./assets/coverpic.jpg">
                 </div>
+            </div>
         </div>
-        </div>
-        <!-- <div class="about2">
-            <table>
-                <tr>
-                    <th>Email</th>
-                    <th>Phone</th>
-                    <th>Location</th>
-                </tr>
-                <tr>
-                    <td>abhideep.03@gmail.com</td>
-                    <td>7801002139</td>
-                    <td>Hyderabad, India</td>
-                </tr>
-            </table>
-        </div> -->
         <div id="edu_id"></div>
-        <div class="education">
+        <div class="education fade-in">
             <h1>EDUCATION</h1>
             <div class="education-flex">
                 <div class="education-container"><h3>Bachelors</h3><p>CHAITANYA BHARATHI INSTITUTE OF TECHNOLOGY, HYDERABAD</p><div>CGPA: 8.32</div></div>
@@ -73,7 +56,7 @@
             </div>
         </div>
         <div id="ski_id"></div>
-        <div class="skills">
+        <div class="skills fade-in">
             <h1>SKILLS</h1>
             <div class="skills-flex">
                     <div class="item">Python</div>
@@ -94,7 +77,7 @@
             </div>
         </div>
         <div id="pro_id"></div>
-        <div class="project">
+        <div class="project fade-in">
             <h1>PROJECTS</h1>
             <div class="project-container">
                 <div class="project-container-flex">
@@ -169,7 +152,7 @@
             <p>Visit GitHub for more: <a href="https://github.com/abhideep03"><i class="fa fa-github"></i></a></p>
         </div>
         <div id="cert_id"></div>
-        <div class="certification">
+        <div class="certification fade-in">
             <h1>ACHIEVEMENTS</h1>
             <h3>Certifications/Internships/Competitions</h3>
             <div class="certification-container">
@@ -241,27 +224,56 @@
     </div>
 </body>
     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+  const text = "I am Abhideep, a fourth-year AI and Data Science student at Chaitanya Bharathi Institute of Technology. Passionate for web development. Proficient in MERN stack development. Created a portfolio of projects. Eager to contribute my skills to a dynamic software development team. Seeking a role that will push me to excel while making a tangible impact.";
+  const typedTextSpan = document.getElementById("typed-text");
+  const cursorSpan = document.createElement("span");
+  cursorSpan.classList.add("cursor");
+  cursorSpan.textContent = "|";
+  typedTextSpan.after(cursorSpan);
+
+  let charIndex = 0;
+  function type() {
+    if (charIndex < text.length) {
+      typedTextSpan.textContent += text.charAt(charIndex);
+      charIndex++;
+      setTimeout(type, 3);
+    } else {
+      cursorSpan.remove();
+    }
+  }
+
+  type();
+});
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+          
+            const observer = new IntersectionObserver((entries) => {
+              entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add('visible');
+                }
+              });
+            });
+          
+            fadeElements.forEach(element => {
+              observer.observe(element);
+            });
+          });
+          
         function toggledarkmode() {
             var element = document.body;
             element.classList.toggle("dark-mode");
-         }
-        document.addEventListener('DOMContentLoaded', function() {
-        const menuButton = document.querySelector('.menu-button');
-        const navLinks = document.querySelector('.nav-links');
-          menuButton.addEventListener('click', function() {
-          navLinks.classList.toggle('active');
-          });
-        });    
+         }   
 
         let slideIndex = 1;
-showSlides(slideIndex);
+        showSlides(slideIndex);
 
-// Next/previous controls
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
 
-// Thumbnail image controls
 function currentSlide(n) {
   showSlides(slideIndex = n);
 }
@@ -282,20 +294,25 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
-
-        window.onscroll = function() {myFunction()};
-        
-        var header = document.getElementById("myHeader");
-        var sticky = header.offsetTop;
-        
-        function myFunction() {
-          if (window.pageYOffset > sticky) {
-            header.classList.add("sticky");
-          } else {
-            header.classList.remove("sticky");
-          }
-        }
-    </script>
+const scrolltoabout = () => {
+    window.scrollTo(0, 0);
+  };
+  const scrolltoedu = () => {
+    window.scrollTo(0, 600);
+  };
+  const scrolltoskills = () => {
+    window.scrollTo(0, 850);
+  };
+  const scrolltoprojects = () => {
+    window.scrollTo(0, 1150);
+  };
+  const scrolltocert = () => {
+    window.scrollTo(0, 2700);
+  };
+  const scrolltocontact = () => {
+    window.scrollTo(0, 40000);
+  };
+</script>
 <footer>
 <!-- <div id="cont_id"></div>
 <div style="background-color: rgb(255, 255, 255);">
