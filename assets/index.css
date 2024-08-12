@@ -343,93 +343,117 @@ span.single-timeline-horizontal {
   transition: 0.1s;
 }
 
+/* PROJECTS */
 .project {
   height: auto;
-  width: min(1200px, 100%);
+  width: min(1200px, 95%);
   margin: 3rem auto;
-  display: flex;
-  flex-direction: column;
   align-items: center;
+  border-top: 1px solid #ffffff7c;
+  border-bottom: 1px solid #ffffff7c;
 }
 
-.project h1 {
-  text-align: center;
-  font: var(--h2);
-  color: var(--color-fg);
+.project-flex {
+  display: flex;
+  flex-direction: row;
+}
+
+img.img2 {
+  width: 99%;
+  height: 99%;
+  padding: 10px;
 }
 
 .project .project-container {
   color: var(--color-fg);
   border-radius: 10px;
-  height: auto;
-  margin: 10px;
+  width: 95%;
+  margin: 20px;
   background-color: var(--color-bg-trans);
 }
 
 .project .project-container:hover {
-  background-color: var(--color-fg-trans);
-}
-.project .project-container h3 {
-  font: var(--h3);
-  color: var(--color-fg);
-  text-align: left;
+  scale: 1.02;
+  transition: 0.3s ease-out;
 }
 
-.project .project-container .project-container-text p {
-  line-height: 0.5;
-  font: var(--p);
-  color: var(--color-fg);
-  text-align: left;
+.project-container:nth-child(odd) {
+  transform: translateY(100px);
 }
 
-img.img1 {
-  width: min(590px, 99%);
-  height: min(360px, 99%);
-  padding: 10px;
+/* .project-container:nth-child(1) {
+  background-color: rgba(255, 0, 0, 0.3);
 }
 
-img.img2 {
-  width: min(370px, 98%);
-  height: min(97%, 98%);
-  padding: 10px;
-}
-img.img3 {
-  width: min(470px, 98%);
-  height: min(200px, 98%);
-  padding: 10px;
+.project-container:nth-child(2) {
+  background-color: rgba(0, 255, 21, 0.3);
 }
 
-/* img.img4 {
-  width: min(350px, 98%);
-  height: min(340px, 98%);
-  padding: 10px;
+.project-container:nth-child(3) {
+  background-color: rgba(0, 174, 255, 0.3);
+}
+
+.project-container:nth-child(4) {
+  background-color: rgba(123, 0, 255, 0.3);
+}
+
+.project-container:nth-child(5) {
+  background-color: rgba(255, 0, 166, 0.3);
+}
+
+.project-container:nth-child(6) {
+  background-color: rgba(255, 174, 0, 0.3);
 } */
 
-img.img5 {
-  width: min(550px, 98%);
-  height: min(300px, 98%);
-  padding: 10px;
-}
-img.img6 {
-  width: min(550px, 98%);
-  height: min(300px, 98%);
-  padding: 10px;
-}
-
-.project-container-flex {
-  display: flex;
-  flex-direction: row;
-}
-
-.project-container-flex-reverse {
-  display: flex;
-  flex-direction: row-reverse;
+.project h1 {
+  text-align: left;
+  margin-left: 10px;
+  font: var(--h1);
+  font-size: 4rem !important;
+  color: var(--color-fg);
+  transform: translate(30px, 80px);
 }
 
 .project-container-text {
   display: flex;
   flex-direction: column;
   padding: 10px;
+}
+
+.project .project-container .project-container-text h3 {
+  font: var(--h3);
+  color: var(--color-fg);
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.project .project-container .project-container-text p {
+  line-height: 1 !important;
+  font: var(--p);
+  color: var(--color-fg);
+  margin: 5px 0;
+  text-align: left;
+}
+
+.tech-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tech-flex button {
+  margin: 5px 5px 5px 0px;
+  font: var(--links);
+  background-color: #0f91ee80;
+  color: var(--color-fg);
+  font-size: 10px;
+  padding: 5px 5px;
+  border: none;
+  border-radius: 5px;
+}
+
+.project-container-flex {
+  display: flex;
+  flex-direction: column;
 }
 
 .link-flex {
@@ -439,28 +463,36 @@ img.img6 {
 
 .link-flex a {
   text-decoration: none;
-  padding: 8px;
-  border-radius: 5px;
+  padding: 5px;
+  margin: 10px 0;
   font: var(--links);
-  font-weight: 500 !important;
-  background: linear-gradient(135deg, var(--colora2), var(--colora));
-  color: var(--color-bg);
+  font-weight: 1000 !important;
+  color: var(--color-fg);
   font-size: 20px;
 }
 
 .link-flex a:hover {
-  transition: var(--transition);
-  opacity: 0.9;
+  background-color: var(--color-bg);
 }
 
-.project p {
+p.project-bottom {
   color: var(--color-fg);
   text-decoration: none;
   text-align: center;
+  margin-top: 100px;
   margin-bottom: 10px;
   font: var(--p);
 }
 
+p.project-bottom a {
+  color: var(--color-fg);
+}
+
+p.project-bottom a:hover {
+  color: var(--color-primary);
+}
+
+/* CERTIFICATION */
 .certification {
   height: auto;
   /* border: var(--color-fg) 1px solid;
